@@ -19,6 +19,7 @@ void inputData(mahasiswa *m) {
    getline (cin, m->alamat);
    cout << "Masukkan IPK:" << endl;
    cin >> m->ipk;
+   cout << "Tekan enter untuk melanjutkan..." << endl;
    cin.ignore();    
 }
 
@@ -36,6 +37,12 @@ void outputData(mahasiswa *m){
 
 int main(){
     mahasiswa Ti2b;
+
+    Ti2b.nama = "Miftahush Syaadah";
+    Ti2b.nim = "C030324077";
+    Ti2b.alamat = "Jl. Pangeran 192, Banjarmasin";
+    Ti2b.ipk = 3.68;
+
     string *nama = &Ti2b.nama;
     string *nim  = &Ti2b.nim;
     string *alamat = &Ti2b.alamat;
@@ -44,5 +51,4 @@ int main(){
     inputData(&Ti2b);
     outputData(&Ti2b);
 
-    return 0;
 }
