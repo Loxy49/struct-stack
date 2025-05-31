@@ -22,11 +22,27 @@ void inputData(mahasiswa *m) {
    cin.ignore();    
 }
 
+void outputData(mahasiswa *m){
+    cout << "== Data Mahasiswa ==\n" << endl;
+    cout << "Nama: " << m->nama << endl;
+    cout << "NIM: " << m->nim << endl;
+    cout << "Alamat: " << m->alamat << endl;
+    cout << "IPK: " << m->ipk << endl;
+    cout << "======================" << endl;
+    cout << "Tekan enter untuk melanjutkan..." << endl;
+    cin.ignore();
+    cin.get();
+}
+
 int main(){
     mahasiswa Ti2b;
     string *nama = &Ti2b.nama;
     string *nim  = &Ti2b.nim;
     string *alamat = &Ti2b.alamat;
-    float *ipk = &Ti2b.ipk; 
-    
+    float *ipk = &Ti2b.ipk;
+
+    inputData(&Ti2b);
+    outputData(&Ti2b);
+
+    return 0;
 }
