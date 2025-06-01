@@ -45,9 +45,29 @@ void PrintStack(Stack *S) {
         cout << "Stack kosong." << endl;
     } else {
         cout << "Isi Stack (dari atas ke bawah): ";
-        for (int i = S->Count - 1; i >= 0; i--) {
+        for (int i = S->count - 1; i >= 0; i--) {
             cout << S->Item[i] << " ";
         }
         cout << endl;
     }
+}
+
+int main() {
+    Stack s;
+    ItemType data;
+
+    InitializeStack(&s);
+
+    Push(10, &s);
+    Push(20, &s);
+    Push(30, &s);
+
+    PrintStack(&s);
+
+    Pop(&s, &data);
+    cout << "Data yang di-pop: " << data << endl;
+
+    PrintStack(&s);
+
+    return 0;
 }
