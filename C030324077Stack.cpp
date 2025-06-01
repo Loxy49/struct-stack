@@ -20,3 +20,13 @@ int Full(Stack *s){
 int Empty(Stack *s){
     return (s->count == 0);
 }
+
+void Push(ItemType x, Stack *s){
+    if (Full(s)){
+        cout << "Stack penuh! Data tidak dapat masuk!" <<endl;
+    }else{
+        s->Item[s->count] = x;
+        ++(s->count);
+        cout << "Data " << x << " berhasil masuk ke stack!" <<endl;
+    }
+}
