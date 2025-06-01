@@ -16,3 +16,7 @@ void InitializeStack(Stack *s) {
 int Full(Stack *s){
     return (s->count == MAXSTACK);
 }
+
+int Empty(Stack *s){
+    return (s->count == 0);
+}
