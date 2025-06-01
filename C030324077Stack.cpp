@@ -12,3 +12,7 @@ typedef struct {
 void InitializeStack(Stack *s) {
     s->count = 0;
 }
+
+int Full(Stack *s){
+    return (s->count == MAXSTACK);
+}
