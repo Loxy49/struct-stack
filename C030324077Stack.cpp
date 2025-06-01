@@ -40,3 +40,14 @@ void Pop(Stack *s, ItemType *x){
         cout << "Data " << *x << " berhasil di-pop dari stack!" <<endl;
     }
 }
+void PrintStack(Stack *S) {
+    if (Empty(S)) {
+        cout << "Stack kosong." << endl;
+    } else {
+        cout << "Isi Stack (dari atas ke bawah): ";
+        for (int i = S->Count - 1; i >= 0; i--) {
+            cout << S->Item[i] << " ";
+        }
+        cout << endl;
+    }
+}
