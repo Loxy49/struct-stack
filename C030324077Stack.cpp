@@ -30,3 +30,13 @@ void Push(ItemType x, Stack *s){
         cout << "Data " << x << " berhasil masuk ke stack!" <<endl;
     }
 }
+
+void Pop(Stack *s, ItemType *x){
+    if(Empty(s)){
+        cout << "Stack kosong!" <<endl;
+    }else{
+        --(s->count);
+        *x = s->Item[s->count];
+        cout << "Data " << *x << " berhasil di-pop dari stack!" <<endl;
+    }
+}
